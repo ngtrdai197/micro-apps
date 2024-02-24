@@ -10,8 +10,9 @@ import (
 func OtpRoutesRegister(app *fiber.App, db *gorm.DB) {
 	// OtpRegister registers the routes of the Otp domain
 	api := app.Group("/api")
-	v1 := api.Group("/v1")
+	v1 := api.Group("/v1/otp")
 
 	trpt := otp_trpt.New(db, validator.New())
-	v1.Post("/otp", trpt.SendOtp)
+	v1.Post("/", trpt.SendOtp)
+	v1.Post("/verify", trpt.VerifyOtp)
 }

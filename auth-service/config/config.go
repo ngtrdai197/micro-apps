@@ -9,9 +9,20 @@ type ApiInfo struct {
 	LogLevel string `mapstructure:"log_level"`
 }
 
+type Consumer struct {
+	GroupID string   `mapstructure:"group_id"`
+	Topics  []string `mapstructure:"topics"`
+}
+
+type Kafka struct {
+	Brokers  []string `mapstructure:"brokers"`
+	Consumer Consumer `mapstructure:"consumer"`
+}
+
 type Schema struct {
 	ApiInfo     ApiInfo `mapstructure:"api_info"`
 	PostgresDSN string  `mapstructure:"pg_dsn"`
+	Kafka       Kafka   `mapstructure:"kafka"`
 }
 
 var Config *Schema

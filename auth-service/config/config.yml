@@ -5,3 +5,18 @@ api_info:
   log_level: "debug"
 
 pg_dsn: "postgresql://postgres:postgres@localhost:5432/account_service?sslmode=disable"
+
+kafka_brokers:
+  - "localhost:9092"
+  - "localhost:9093"
+  - "localhost:9094"
+
+kafka:
+  brokers:
+    - "localhost:9092"
+    - "localhost:9093"
+    - "localhost:9094"
+  consumer:
+    group_id: "auth-service.consumer-group"
+    topics:
+      - "account-service.user.created"
