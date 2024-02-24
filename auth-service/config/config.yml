@@ -6,11 +6,6 @@ api_info:
 
 pg_dsn: "postgresql://postgres:postgres@localhost:5432/account_service?sslmode=disable"
 
-kafka_brokers:
-  - "localhost:9092"
-  - "localhost:9093"
-  - "localhost:9094"
-
 kafka:
   brokers:
     - "localhost:9092"
