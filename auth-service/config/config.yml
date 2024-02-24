@@ -1,0 +1,7 @@
+api_info:
+  port: 8080
+  host: "localhost"
+  version: "v1"
+  log_level: "debug"
+
+pg_dsn: "postgresql://postgres:postgres@localhost:5432/account_service?sslmode=disable"
