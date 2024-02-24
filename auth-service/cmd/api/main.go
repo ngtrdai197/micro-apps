@@ -33,7 +33,7 @@ func main() {
 
 	OtpRoutesRegister(app, db)
 
-	err := app.Listen(":3000")
+	err := app.Listen(fmt.Sprintf(":%s", config.Config.ApiInfo.Port))
 	if err != nil {
 		log.Fatal().Err(err).Msg("Failed to start server")
 		return
