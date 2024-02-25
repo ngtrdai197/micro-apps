@@ -1,5 +1,5 @@
 api_info:
-  port: 8080
+  port: 8088
   host: "localhost"
   version: "v1"
   log_level: "debug"
@@ -8,9 +8,9 @@ pg_dsn: "postgresql://postgres:postgres@localhost:5432/account_service?sslmode=d
 
 kafka:
   brokers:
-    - "localhost:9092"
-    - "localhost:9093"
-    - "localhost:9094"
+    - "localhost:8097"
+    - "localhost:8098"
+    - "localhost:8099"
   consumer:
     group_id: "auth-service.consumer-group"
     topics:
